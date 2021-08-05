@@ -27,9 +27,9 @@ public:
 
 	void setOrientationAndPos(const Quaternion& q,const Vec3& v);
 
-	Vec3 localToWorld(const Vec3& local,const Mat34& transform);
+	Vec3 localToWorld(const Vec3& local,const Mat34& transform)const;
 
-	Vec3 worldToLocal(const Vec3& world,const Mat34& transform);
+	Vec3 worldToLocal(const Vec3& world,const Mat34& transform)const;
 
 	Vec3 transformDirection(const Vec3& vector)const;
 

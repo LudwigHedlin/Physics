@@ -86,12 +86,12 @@ void Mat34::setOrientationAndPos(const Quaternion& q,const Vec3& v)
     matrix[11] = v.z;
 }
 
-Vec3 Mat34::localToWorld(const Vec3& local,const Mat34& transform) 
+Vec3 Mat34::localToWorld(const Vec3& local,const Mat34& transform)const 
 {
     return transform*local;
 }
 
-Vec3 Mat34::worldToLocal(const Vec3& world,const Mat34& transform) 
+Vec3 Mat34::worldToLocal(const Vec3& world,const Mat34& transform)const 
 {
     Mat34 inverseTransform;
     inverseTransform.setInverse(transform);
